@@ -1,0 +1,9 @@
+{
+    "name": "Test",
+    "dependencies": {
+        "connect-slashes": "1.2.0",
+        "express": "3.4.6",
+        "express-hbs": "0.7.6",
+        "when": "2.7.0"
+    }
+}
