@@ -1,8 +1,7 @@
 {{!< default}}
 
-<p>Expected behaviour (sub-template): <strong>{{weird}}</strong></p>
-
 {{#contentFor 'meta'}}
   <p>Unexpected behaviour: <strong>{{weird}}</strong></p>
+  <p>Unexpected behaviour: <strong>{{encode (weird)}}</strong></p>
 {{/contentFor}}
 
