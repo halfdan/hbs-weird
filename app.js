@@ -18,12 +18,12 @@ app.get('/', function(req, res){
   });
 });
 
-function weird() {
-  return when(function() { return 'http://foo.bar/?baz=foo'; }, function(val){return val;});  
+function someAsyncString() {
+  return when(function() { return '<title>Tiesto - Escape me</title>'; }, function(val){ return val;});  
 }
 
-function encode(uri) {
-  return new hbs.handlebars.SafeString(encodeURIComponent(uri));
+function someString() {
+  return '<title>Tiesto - Escape me</title>';
 }
 
 // Register an async handlebars helper for a given handlebars instance
@@ -37,8 +37,8 @@ function registerAsyncHelper(hbs, name, fn) {
   });
 }
 
-hbs.registerHelper('encode', encode);
-registerAsyncHelper(hbs, 'weird', weird);
+hbs.registerHelper('someString', someString);
+registerAsyncHelper(hbs, 'asyncString', someAsyncString);
 
 app.listen(3000);
 

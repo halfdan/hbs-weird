@@ -1,7 +1,14 @@
 {{!< default}}
 
-{{#contentFor 'meta'}}
-  <p>Unexpected behaviour: <strong>{{weird}}</strong></p>
-  <p>Unexpected behaviour: <strong>{{encode (weird)}}</strong></p>
-{{/contentFor}}
+<h1>Example</h1>
+<h2>Here should be an async escaped string</h2>
 
+<pre>
+{{asyncString}}
+</pre>
+
+<h2>Here should be a non-async escaped string</h2>
+
+<pre>
+{{someString}}
+</pre>
